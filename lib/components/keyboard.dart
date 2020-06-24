@@ -17,37 +17,36 @@ class Keyboard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ButtonRow([
-            Button.dark(text: "AC", cb: cb),
-            Button.dark(text: "±", cb: cb),
-            Button.dark(text: "%", cb: cb),
+            Button(text: "AC", textColor: Colors.amber,big: true, cb: cb),
+            Button.operation(text: "%", cb: cb),
             Button.operation(text: "÷", cb: cb),
           ]),
-          SizedBox(height: 1),
+          SizedBox(height: 4),
           ButtonRow([
             Button(text: "7", cb: cb),
             Button(text: "8", cb: cb),
             Button(text: "9", cb: cb),
             Button.operation(text: "x", cb: cb),
           ]),
-          SizedBox(height: 1),
+          SizedBox(height: 4),
           ButtonRow([
             Button(text: "4", cb: cb),
             Button(text: "5", cb: cb),
             Button(text: "6", cb: cb),
             Button.operation(text: "–", cb: cb),
           ]),
-          SizedBox(height: 1),
+          SizedBox(height: 4),
           ButtonRow([
             Button(text: "1", cb: cb),
             Button(text: "2", cb: cb),
             Button(text: "3", cb: cb),
             Button.operation(text: "+", cb: cb),
           ]),
-          SizedBox(height: 1),
+          SizedBox(height: 4),
           ButtonRow([
             Button(text: "0", big: true, cb: cb),
-            Button(text: ".", cb: cb),
-            Button.operation(text: "=", cb: cb),
+            Button(text: ",", cb: cb),
+            Button.equal(text: "=", cb: cb),
           ])
         ]
       ),

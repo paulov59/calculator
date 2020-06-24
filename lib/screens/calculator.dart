@@ -30,7 +30,7 @@ class _CalculatorState extends State<Calculator> {
       debugShowCheckedModeBanner: false,
       home: Column(
         children: <Widget>[
-          Display(memory.value),
+          Display(memory.value, memory.result),
           Keyboard(_onPressed),
         ],
       )
